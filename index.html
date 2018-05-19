@@ -1,72 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
 
-        <title> RPG Game</title>
-  <!-- Added link to the jQuery Library -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<head>
+    <meta charset="UTF-8">
 
-  <!--Reset CSS-->
-  <link rel="stylesheet" href="assets/css/reset.css" type="text/css">
+    <title> RPG Game</title>
+    <!-- Added link to the jQuery Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!--Reset CSS-->
+    <link rel="stylesheet" href="assets/css/reset.css" type="text/css">
 
 
-  <!-- Added a link to Bootstrap-->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <!-- Added a link to Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+        crossorigin="anonymous">
 
-<!--Custom CSS-->
-<link rel="stylesheet" href="assets/css/style.css" type="text/css">
+    <!--Custom CSS-->
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css">
 
-<!--Javascript File-->
-<script src="assets/js/logic.js" type="text/javascript"></script>
-<body>
-    <div class="jumbotron">
-        <h1 class="text-center">RPG Game!</h1>
+    <!--Javascript File-->
+    <script src="assets/js/logic.js" type="text/javascript"></script>
 
-    <div class="container">
-        <div class="row" id="all">
-            <h5>All Characters</h5>
-                    <div class="character-image-div"> 
-                        Dracula
-                    <img id="dracula" class="character-image" src="assets/images/dracula.png" alt="Dracula" height=150px width=auto> </div>
+    <body>
+        <div class="jumbotron">
+            <h1 class="text-center">RPG Game!</h1>
 
-                    <div class="character-image-div"> 
-                            Frankenstein
-                        <img id="dracula" class="character-image" src="assets/images/frank.png" alt="Frankenstein" height=150px width=auto> </div>
+        </div>
+        <div class="container" id="main-game-section">
 
-                        <div class="character-image-div"> 
-                               Zombie
-                            <img id="Zombie" class="character-image" src="assets/images/zombie.png" alt="Zombie" height=150px width=auto> </div>
-
-                            <div class="character-image-div"> 
-                                    Werewolf
-                                 <img id="Werewolf" class="character-image" src="assets/images/werewolf.png" alt="Werewolf" height=150px width=auto> </div>
-
-        <div class="row" id="yours">
-                <h5>Your character</h5>
-    
+            <!--Where characters are initially available to be selected-->
+            <div id="characters-section">
+                <div class="section-title">Select Your Character</div>
             </div>
 
-            <div class="row" id="enemies">
-                    <h5>Enemies to attack</h5>
+            <!--Where characters are initially available to be selected-->
+            <div id="selected-character-section">
+                <div class="section-title">Your Character</div>
+                <!--Where our selected character will appear-->
+                <div id="selected-character"></div>
+            </div>
+
+      <!--Where our enemies available to attack will appear-->
+      <div id="available-to-attack-section">
+            <div class="section-title">Enemies Available to Attack</div>
+        </div>
+
+        <!--Attack button-->
+        <div class="section-title">Fight Section</div>
+        <div id="fight-section">
+            <button id="attack-button">Attack</button>
+        </div>
+
+        <div id="action">
+            <div class="character-section">
+                <div class="section-title">Defender</div>
+                <!--Where our defender will appear-->
+                <div id="defender"></div>
+            </div>
+        </div>
         
-                </div>
-
-                <div class="row" id="fight">
-                        <h5>fight section</h5>
-                        <button type="button" class="btn btn-primary" id="attack">attack</button>
-            
-                    </div>
-
-                    <div class="row" id="defender">
-                            <h5>defender</h5>
-                
-                        </div>
-
-    </div>
-
-</body>
+        <!--Area for game messages-->
+        <div id="game-message"></div>
+    </body>
 
 
-    </head>
+</head>
+
 </html>

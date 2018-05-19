@@ -1,11 +1,43 @@
+//Global Variables
 
-// Character constructor
-function Character(name, hp) {
-    this.name = name;
-    this.hp = hp;
+var characters = {
+    "Dracula": {
+        name: "Dracula",
+        hp: 145,
+        attack: 10,
+        imageUrl: "assets/images/dracula.png",
+        enemyAttackBack: 15
+    },
+
+    "Frankenstein": {
+        name: "Frankenstein",
+        hp: 255,
+        attack: 3,
+        imageUrl: "assets/images/frank.png",
+        enemyAttackBack: 25
+    },
+
+    "Zombie": {
+        name: "Zombie",
+        hp: 100,
+        attack: 12,
+        imageUrl: "assets/images/zombie.png",
+        enemyAttackBack: 12
+    },
+
+    "Werewolf": {
+        name: "Werewolf",
+        hp: 200,
+        attack: 18,
+        imageUrl: "assets/images/werewolf.png",
+        enemyAttackBack: 3
+    },
+
+
+
 
 }
-//Global Variables
+
 var allCharacters = [];
 var yourCharacter;
 var availableEnemies= [];
@@ -17,17 +49,13 @@ var remainingHP = [];
 
 
 
-
-
-//Characters
-var zombie = new Character ("Zombie", 275);
-var vampire = new Character ("Vampire", 412);
-var werewolf= new Character ("Werewolf", 201);
-var ghoul = new Character ("Ghoul", 435);
-
-//App loads and displays 4 characters (populated from JSON file?)
+//App loads and displays 4 characters 
 
 //Player chooses character by clicking fighters picture
+
+function choosePlayer () {
+    $("")
+}
 
 
 //That fighter moves to "your character" div #yours
