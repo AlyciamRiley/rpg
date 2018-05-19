@@ -1,3 +1,30 @@
+
+// Character constructor
+function Character(name, hp) {
+    this.name = name;
+    this.hp = hp;
+
+}
+//Global Variables
+var allCharacters = [];
+var yourCharacter;
+var availableEnemies= [];
+var chosenDefender;
+var defeatedOpponents= [];
+var availableHP = [];
+var remainingHP = [];
+
+
+
+
+
+
+//Characters
+var zombie = new Character ("Zombie", 275);
+var vampire = new Character ("Vampire", 412);
+var werewolf= new Character ("Werewolf", 201);
+var ghoul = new Character ("Ghoul", 435);
+
 //App loads and displays 4 characters (populated from JSON file?)
 
 //Player chooses character by clicking fighters picture
