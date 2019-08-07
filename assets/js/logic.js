@@ -38,6 +38,7 @@ var characters = {
 
   }
 
+var remainingCharacters = [];
 
   function renderGame(){
     var keys =  Object.entries(characters);
@@ -47,6 +48,7 @@ var characters = {
     }
   }
   renderGame();
+
   //on click events
     //choose player
 
@@ -54,9 +56,14 @@ var characters = {
       var myCharacter = this;
       $(this).addClass("ok")
 
-      console.log($(".character-btn.ok").attr("data-name"));
-      $(myCharacter).appendTo("#selected-character");
-    })
-    
+      //assign classes
+      //run seperate function that moves everything
 
+      if ($(".character-btn").hasClass("ok")) {
+        $(myCharacter).appendTo("#selected-character");
+      } else {
+        $(".character-btn").appendTo("#defender");
+      }
+    
+    })
 });
