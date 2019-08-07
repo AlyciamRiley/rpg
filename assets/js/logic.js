@@ -36,20 +36,27 @@ var characters = {
     enemyAttackBack: 3
   },
 
-
-
   }
+
 
   function renderGame(){
     var keys =  Object.entries(characters);
     for (var i = 0; i < keys.length; i++) {
       console.log(keys[i][0])
-      $("#selected-character-section").prepend('<img id="character"' + 'src=' + keys[i][1].imageUrl + '>')
-
+      $("#selected-character-section").prepend('<button class="character-btn" data-name="' + keys[i][0] + '">' + '<img id="character"' + 'src=' + keys[i][1].imageUrl + '>' + "</button>")
     }
   }
   renderGame();
+  //on click events
+    //choose player
 
+    $(".character-btn").click( function () {
+      var myCharacter = this;
+      $(this).addClass("ok")
 
+      console.log($(".character-btn.ok").attr("data-name"));
+      $(myCharacter).appendTo("#selected-character");
+    })
+    
 
 });
